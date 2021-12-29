@@ -24,7 +24,7 @@ export default function login() {
 
             <button type="submit" className="btn btn-primary btn-block">Submit</button>
             <p className="forgot-password text-right">
-                Forgot <a href="/login">password?</a>
+                Forgot <a href="/forgotpass">password?</a>
             </p>
         </form>
     )

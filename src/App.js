@@ -3,8 +3,8 @@ import {BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Login from './components/Login';
 import Register from './components/Register';
-import Valid from './components/validate';
-import logo from './logo.svg';
+import Forgotpw from './components/forgotpassword';
+import studentim from './components/StudentNetwork.png';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -13,8 +13,11 @@ function App() {
     <div className="App">
         <Router>
           <nav className="navbar navbar-expand-lg navbar-light fixed-top">
+            <img src={studentim} className="lgimage"/>
             <div className="container">
-              <Link className="navbar-brand" to={"/login"}><b >Student Network</b></Link>
+              <Link className="navbar-brand" to={"/login"}>
+
+              </Link>
               <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul className="navbar-nav ml-auto">
                   <li className="nav-item">
@@ -34,6 +37,7 @@ function App() {
                 <Route exact path="/" component={ Login }/>
                 <Route path="/login" component={ Login }/>
                 <Route path="/signup" component={ Register }/>
+                <Route path="/forgotpass" component={ Forgotpw }/>
               </Switch>
             </div>
           </div>

@@ -31,16 +31,6 @@ export default function register(){
             </div>
 
             <div className="form-group">
-                <label>Security Question</label>
-                <input type="email" required className="form-control" placeholder="Enter question" />
-            </div>
-
-            <div className="form-group">
-                <label>Security Answer</label>
-                <input type="email" required className="form-control" placeholder="Enter answer" />
-            </div>
-
-            <div className="form-group">
                 <label>Password</label>
                 <input type="password" className="form-control" placeholder="Enter password" />
             </div>
