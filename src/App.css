@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+input, select{
+  margin:5px 10px 10px 0;
+}
+label{
+  margin:10px 0 0 0;
+}
+button{
+  width:100%;
+  margin-top: 12px;
+}
+
+.ml-auto{
+  margin-left: auto!important;
+}
+.container{
+  max-width: 1140px;
+}
