@@ -11,13 +11,13 @@ import './App.css';
 
 function App() {
 
-  const [data, setData] = React.useState(null);
+  // const [data, setData] = React.useState(null);
 
-  React.useEffect(() => {
-    fetch("/api")
-        .then((res) => res.json())
-        .then((data) => setData(data.message));
-  }, []);
+  // React.useEffect(() => {
+  //   fetch("/api")
+  //       .then((res) => res.json())
+  //       .then((data) => setData(data.message));
+  // }, []);
 
   return (
     <div className="App">
@@ -27,7 +27,7 @@ function App() {
             <div className="container">
               <div className="navbar-brand">
               <Link  to={"/login"}>
-                <img src={studentim} className="lgimage"/>
+                <img src={studentim} className="lgimage" alt="studentNetwork"/>
               </Link>
               </div>
               <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
