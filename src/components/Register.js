@@ -4,10 +4,10 @@ import React from "react";
 export default function register(){
 
 
-
-
+    // const  [state,setState] = useState(0);
+    //
     // const handleSubmit = (event) => {
-    //     alert('A form was submitted: ' + this.state);
+    //
     //
     //     fetch('http://localhost:5000/users/register', {
     //         method: 'POST',
@@ -22,8 +22,10 @@ export default function register(){
     // }
 
     return(
+        <div className="auth-wrapper">
+            <div className="auth-inner">
         <form action="http://localhost:5000/users/register" method="POST">
-        {/*// <form onSubmit={handleSubmit()} >*/}
+        {/*<form onSubmit={handleSubmit} >*/}
             <h3>Sign Up</h3>
 
             <div className="form-group">
@@ -60,5 +62,7 @@ export default function register(){
                 Already registered <a href="/login">sign in?</a>
             </p>
         </form>
+            </div>
+        </div>
     )
 }

@@ -5,7 +5,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import Forgotpw from './components/forgotpassword';
 import Home1 from './components/Home1';
-import studentim from './components/StudentNetwork.png';
+import studentim from './components/Images/StudentNetwork.png';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -42,19 +42,18 @@ function App() {
               </div>
             </div>
           </nav>
-
-          <div className="auth-wrapper">
-            <div className="auth-inner">
+          <Route path="/home1" component={ Home1 }/>
+          {/*<div className="auth-wrapper">*/}
+          {/*  <div className="auth-inner">*/}
               <Switch>
                 <Route exact path="/" component={ Login }/>
                 <Route path="/login" component={ Login }/>
                 <Route path="/signup" component={ Register }/>
                 <Route path="/forgotpass" component={ Forgotpw }/>
-                <Route path="/home1" component={ Home1 }/>
               </Switch>
               {/*<p>{!data ? "Loading...": data}</p>*/}
-            </div>
-          </div>
+          {/*  </div>*/}
+          {/*</div>*/}
         </Router>
     </div>
   );

@@ -2,6 +2,8 @@ import React from "react";
 
 export default function forgotpw(){
     return(
+        <div className="auth-wrapper">
+            <div className="auth-inner">
         <form>
             <h3>Forgot Password</h3>
 
@@ -15,5 +17,7 @@ export default function forgotpw(){
                 Back to <a href="/login">Login?</a>
             </p>
         </form>
+            </div>
+        </div>
     )
 }

@@ -2,17 +2,19 @@ import React from "react";
 
 export default function login() {
     return(
-        <form>
+        <div className="auth-wrapper">
+            <div className="auth-inner">
+        <form action="http://localhost:5000/users/login" method="POST">
             <h3>Sign In</h3>
 
             <div className="form-group">
                 <label>Email address</label>
-                <input type="email" className="form-control" placeholder="Enter email" />
+                <input type="email" name="email" className="form-control" required placeholder="Enter email" />
             </div>
 
             <div className="form-group">
                 <label>Password</label>
-                <input type="password" className="form-control" placeholder="Enter password" />
+                <input type="password" name="pwd" className="form-control" required placeholder="Enter password" />
             </div>
 
             <div className="form-group">
@@ -27,6 +29,8 @@ export default function login() {
                 Forgot <a href="/forgotpass">password?</a>
             </p>
         </form>
+            </div>
+        </div>
     )
 }
 
