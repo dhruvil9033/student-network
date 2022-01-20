@@ -13,7 +13,7 @@ export default function home1(){
             <div className="homeContainer">
                 <Sidebar />
                 <Feed/>
-                {/*<Rightbar/>*/}
+                <Rightbar/>
             </div>
         </>
     );
