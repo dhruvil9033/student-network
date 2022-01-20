@@ -1,12 +1,12 @@
 import React from "react";
-import {BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "./context/AuthContext";
 
-import Topbar from './component/topbar/topbar';
-import Login from './components/Login';
-import Register from './components/Register';
-import Forgotpw from './components/forgotpassword';
-import Home1 from './components/Home1';
-import studentim from './components/Images/StudentNetwork.png';
+import Login from './pages/login/Login';
+import Register from './pages/register/Register';
+import Forgotpw from './pages/forgotpass/forgotpassword';
+import Home1 from './pages/home/Home1';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -19,13 +19,22 @@ function App() {
   //       .then((res) => res.json())
   //       .then((data) => setData(data.message));
   // }, []);
-
+    const { user } = useContext(AuthContext);
   return (
-    <div className="App">
+    // <div className="App">
         <Router>
           {/*<div className="auth-wrapper">*/}
           {/*  <div className="auth-inner">*/}
               <Switch>
+                  <Route exact path="/">
+                      {user ? <Home1 /> : <Login />}
+                  </Route>
+                  <Route path="/login">{user ? <Redirect to="/" /> : <Login />}</Route>
+                  <Route path="/signup">
+                      {user ? <Redirect to="/" /> : <Register />}
+                  </Route>
+
+
                 <Route exact path="/" component={ Login }/>
                 <Route path="/login" component={ Login }/>
                 <Route path="/signup" component={ Register }/>
@@ -37,7 +46,7 @@ function App() {
           {/*  </div>*/}
           {/*</div>*/}
         </Router>
-    </div>
+    // </div>
   );
 }
 
