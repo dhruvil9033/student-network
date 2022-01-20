@@ -57,7 +57,7 @@ export default function register(){
                 <input type="password" className="form-control" required name="pwd" placeholder="Enter password" />
             </div>
 
-            <button type="submit" className="btn btn-primary btn-block">Sign Up</button>
+            <button type="submit" className="btn btn-primary btn-block" onClick="/login">Sign Up</button>
             <p className="forgot-password text-right">
                 Already registered <a href="/login">sign in?</a>
             </p>

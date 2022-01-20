@@ -16,16 +16,6 @@
   }
 }
 
-.lgimage{
-  margin:-2% 0 -2% 0;
-  width: 30%;
-
-}
-.navbar-brand{
-  text-align: left;
-  /*margin-left: -30%;*/
-  /*width: 30%;*/
-}
 
 .App-header {
   background-color: #282c34;
@@ -65,6 +55,4 @@ button{
 .ml-auto{
   margin-left: auto!important;
 }
-.container{
-  max-width: 1140px;
-}
+
