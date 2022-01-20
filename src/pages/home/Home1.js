@@ -1,5 +1,5 @@
 import React from "react";
-import studentLogo from '../../assests/Images/Student_Network2.png';
+// import studentLogo from '../../../public/Images/Student_Network2.png';
 
 import Topbar from '../../components/topbar/Topbar';
 import Sidebar from "../../components/sidebar/Sidebar";
@@ -12,8 +12,8 @@ export default function home1(){
             <Topbar />
             <div className="homeContainer">
                 <Sidebar />
+                {/*<Rightbar/>*/}
                 <Feed/>
-                <Rightbar/>
             </div>
         </>
     );

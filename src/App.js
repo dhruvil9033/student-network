@@ -7,6 +7,7 @@ import Login from './pages/login/Login';
 import Register from './pages/register/Register';
 import Forgotpw from './pages/forgotpass/forgotpassword';
 import Home1 from './pages/home/Home1';
+import Reset from './pages/forgotpass/resetpass';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -40,6 +41,7 @@ function App() {
                 <Route path="/signup" component={ Register }/>
                 <Route path="/forgotpass" component={ Forgotpw }/>
                 <Route path="/home1" component={ Home1 }/>
+                  <Route path="/reset" component={ Reset }/>
 
               </Switch>
               {/*<p>{!data ? "Loading...": data}</p>*/}

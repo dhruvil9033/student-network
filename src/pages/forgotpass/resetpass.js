@@ -4,12 +4,13 @@ import { useHistory } from "react-router-dom";
 import {CircularProgress} from "@material-ui/core";
 import {AuthContext} from "../../context/AuthContext";
 import {loginCall} from "../../apiCalls";
-import './forgotpass.css';
+import './resetpass.css';
 
 
 export default function Forgotpw(){
 
-    const email = useRef();
+    const password = useRef();
+    const cfpassword = useRef();
     const history = useHistory();
     const handleClick = (e) => {
         e.preventDefault();
@@ -48,23 +49,30 @@ export default function Forgotpw(){
                 {/*</span>*/}
                 {/*      </div>*/}
                 <div className="loginRight">
-                    <div className="loginBox">
+                    <div className="loginBox3">
                         <form onSubmit={handleClick}>
                             <div align="center">
                                 <img src="Images/Student_Network1.png" style={{width:"60%"}} alt="Student Network"/>
                             </div>
                             <input
-                                placeholder="Email"
-                                type="email"
+                                placeholder="Password"
+                                type="password"
                                 required
                                 className="loginInput"
-                                ref={email}
+                                ref={password}
+                            />
+                            <input
+                                placeholder="Confirm Password"
+                                type="password"
+                                required
+                                className="loginInput"
+                                ref={cfpassword}
                             />
 
-                            <button className="loginButton" type="submit" >Sent Mail</button>
+                            <button className="loginButton" type="submit" >Submit</button>
 
                         </form>
-                        <span className="loginForgot">Back to <a href="/login">Login</a></span>
+                        {/*<span className="loginForgot">Back to <a href="/login">Login</a></span>*/}
 
                     </div>
                 </div>

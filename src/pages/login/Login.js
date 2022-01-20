@@ -5,7 +5,7 @@ import { loginCall } from "../../apiCalls";
 import { AuthContext } from "../../context/AuthContext";
 import { CircularProgress } from "@material-ui/core";
 import axios from "axios";
-import studentLogo from "../../assests/Images/Student_Network1.png";
+// import studentLogo from "../../../public/Images/Student_Network1.png";
 
 export default function Login() {
 
@@ -36,7 +36,7 @@ export default function Login() {
                     <div className="loginBox2">
                     <form onSubmit={handleClick}>
                         <div align="center">
-                            <img src={studentLogo} style={{width:"60%"}} alt="Student Network"/>
+                            <img src="Images/Student_Network1.png" style={{width:"60%"}} alt="Student Network"/>
                         </div>
                         <input
                             placeholder="Email"
