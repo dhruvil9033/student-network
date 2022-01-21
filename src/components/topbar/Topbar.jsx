@@ -25,30 +25,31 @@ export default function Topbar() {
       </div>
       <div className="topbarRight">
         <div className="topbarLinks">
-          <span className="topbarLink">Homepage</span>
-          <span className="topbarLink">Timeline</span>
+          {/* <span className="topbarLink">Homepage</span>
+          <span className="topbarLink">Timeline</span> */}
         </div>
         <div className="topbarIcons">
           <div className="topbarIconItem">
-            <Person />
-            <span className="topbarIconBadge">1</span>
+            {/* <Person />
+            <span className="topbarIconBadge">1</span> */}
           </div>
           <div className="topbarIconItem">
-            <Chat />
-            <span className="topbarIconBadge">2</span>
+            {/* <Chat />
+            <span className="topbarIconBadge">2</span> */}
           </div>
           <div className="topbarIconItem">
-            <Notifications />
-            <span className="topbarIconBadge">1</span>
+            {/* <Notifications />
+            <span className="topbarIconBadge">1</span> */}
           </div>
         </div>
         <Link to={`/profile/${user.username}`}>
           <img
-            src={
-              user.profilePicture
-                ? PF + user.profilePicture
-                : PF + "person/noAvatar.png"
-            }
+            // src={
+            //   user.profilePicture
+            //     ? PF + user.profilePicture
+            //     : PF + "person/noAvatar.png"
+            // }
+            src="https://png.pngitem.com/pimgs/s/78-786293_1240-x-1240-0-avatar-profile-icon-png.png"
             alt=""
             className="topbarImg"
           />

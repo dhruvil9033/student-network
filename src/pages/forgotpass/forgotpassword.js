@@ -89,7 +89,7 @@ export default function Forgotpw() {
               </button>
             </form>
             <span className="loginForgot">
-              Back to <a href="/login">Login</a>
+              <a href="/login">Back to Login</a>
             </span>
           </div>
         </div>
