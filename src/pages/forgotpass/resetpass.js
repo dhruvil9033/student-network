@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { useHistory } from "react-router-dom";
 // import studentLogo from "../../../public/Images/Student_Network1.png";
 import { CircularProgress } from "@material-ui/core";
@@ -13,6 +13,8 @@ export default function Reset() {
   const password = useRef();
   const cfpassword = useRef();
   const history = useHistory();
+  const [isFetching, setIsFetching] = useState(false);
+
   const handleClick = async (e) => {
     e.preventDefault();
 
@@ -22,7 +24,9 @@ export default function Reset() {
         email: email,
       };
       try {
+        setIsFetching(true);
         await axios.put(`/users/resetpassword`, user);
+        setIsFetching(false);
         history.push("/login");
       } catch (err) {
         console.log(err);
@@ -30,40 +34,17 @@ export default function Reset() {
     } else {
       alert("Please re-enter Correct Password..");
     }
-
-    // loginCall(
-    //     { email: email.current.value, password: password.current.value },
-    //     dispatch
-    // history.push("/login");
   };
 
   return (
-    // <div className="auth-wrapper">
-    //     <div className="auth-inner">
-    // <form>
-    //     <h3>Forgot Password</h3>
-    //
-    //     <div className="form-group">
-    //         <label>Email address</label>
-    //         <input type="email" className="form-control" placeholder="Enter email" />
-    //     </div>
-    //
-    //     <button type="submit" className="btn btn-primary btn-block">Sent Mail</button>
-    //     <p className="forgot-password text-right">
-    //         Back to <a href="/login">Login?</a>
-    //     </p>
-    // </form>
-    //     </div>
-    // </div>
-
     <div className="login">
       <div className="loginWrapper">
-        {/*      <div className="loginLeft">*/}
-        {/*          <h3 className="loginLogo">Lamasocial</h3>*/}
-        {/*          <span className="loginDesc">*/}
-        {/*  Connect with friends and the world around you on Lamasocial.*/}
-        {/*</span>*/}
-        {/*      </div>*/}
+        <div className="loginLeft">
+          <h3 className="loginLogo">Student Network</h3>
+          <span className="loginDesc">
+            Connect with friends and faculties on Student Network.
+          </span>
+        </div>
         <div className="loginRight">
           <div className="loginBox3">
             <form onSubmit={handleClick}>
@@ -90,7 +71,11 @@ export default function Reset() {
               />
 
               <button className="loginButton" type="submit">
-                Submit
+                {isFetching ? (
+                  <CircularProgress color="secondary" size="20px" />
+                ) : (
+                  "Submit"
+                )}
               </button>
             </form>
             {/*<span className="loginForgot">Back to <a href="/login">Login</a></span>*/}

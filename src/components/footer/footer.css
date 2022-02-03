@@ -1,0 +1,49 @@
+.footer {
+  flex-direction: column;
+  justify-content: center;
+  /* position: fixed; */
+  left: 0;
+  /* bottom: 0; */
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.app__footer {
+  text-align: center;
+  justify-content: center;
+}
+.hr {
+  margin-top: 15px;
+}
+.copyright {
+  text-align: center;
+  font-size: 1rem;
+  margin: 15px;
+}
+.contactus {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  margin-bottom: -3rem;
+}
+.con {
+  margin-right: 15px;
+}
+.con a {
+  color: black;
+}
+.coni a {
+  color: blue;
+}
+
+.ins a {
+  color: black;
+}
+.coni {
+  margin-right: 15px;
+  color: blue;
+}
+.contact {
+  display: flex;
+  background-color: #f5f6fa;
+  margin-left: 15px;
+}
