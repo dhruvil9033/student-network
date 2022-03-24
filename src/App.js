@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Fragment, useEffect} from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -21,6 +21,10 @@ import CreateProfile from "./components/profile-form/CreateProfile";
 
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+// import store from "../store";
+import PrivateRoute from "./components/routing/PrivateRoute";
+import {loadUser} from "./actions/auth";
+import Topbar from "./components/topbar/Topbar";
 
 function App() {
   // const [data, setData] = React.useState(null);
@@ -32,9 +36,14 @@ function App() {
   // }, []);
   const { user } = useContext(AuthContext);
   console.log(user);
+  // useEffect(() => {
+  //   store.dispatch(loadUser());
+  // }, []);
   return (
     // <div className="App">
     <Router>
+
+      {/*<Route exact path='/' component={Landing} />*/}
       {/*<div className="auth-wrapper">*/}
       {/*  <div className="auth-inner">*/}
       <Switch>
@@ -56,12 +65,14 @@ function App() {
         <Route path="/reset" component={Reset} />
         <Route path="/profile" component={Profile} />
         <Route path="/logout" component={Logout} />
+        <PrivateRoute exact path='/dashboard' component={Dashboard} />
+        <PrivateRoute
+            exact
+            path='/create-profile'
+            component={CreateProfile}
+        />
       </Switch>
-      {/*<p>{!data ? "Loading...": data}</p>*/}
-      {/*  </div>*/}
-      {/*</div>*/}
-    </Router>
-    // </div>
+      </Router>
   );
 }
 

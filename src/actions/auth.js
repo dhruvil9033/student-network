@@ -1,5 +1,5 @@
 import axios from "axios";
-import setAuthToken from "../utils/setAuthToken";
+// import setAuthToken from "../utils/setAuthToken";
 import { setAlert } from "./alert";
 
 import {
@@ -21,7 +21,7 @@ import {
 
 export const loadUser = () => async (dispatch) => {
   if (localStorage.token) {
-    setAuthToken(localStorage.token);
+    // setAuthToken(localStorage.token);
   }
 
   try {

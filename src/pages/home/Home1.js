@@ -7,17 +7,17 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import Footer from "../../components/footer/footer";
 
 import "./home1.css";
+import {Card, CardContent} from "@material-ui/core";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import InstagramIcon from "@material-ui/icons/Instagram";
 export default function home1() {
   return (
     <>
       <Topbar />
-
-      {/* <Feed /> 
-      <Rightbar /> */}
-
-      <div className="homex">
+      <div className="homex" >
         <div className="container-home">
-          <Sidebar />
+          {/*<Sidebar />*/}
           <div className="content-container">
             <img src={studentLogo} className="logo" />
             {/* <h1 className="large text-primary">Student Network</h1> */}
@@ -26,7 +26,7 @@ export default function home1() {
               from other Students, Faculties, Working Profationals
             </p>
             <div className="buttons">
-              <Link to="/DashBoard" className="btn btn-primary">
+              <Link to="/Dashboard" className="btn btn-primary">
                 Create Profile
               </Link>
             </div>
@@ -35,8 +35,33 @@ export default function home1() {
             <img className="home_img glow" src={HomeImg} alt="" />
           </div>
         </div>
+        <div className="footer">
+          <hr/>
+          <p className="copyright"> Made With ❤️ By Raj Babriya & Dhruvil Gajera</p>
+          <Card className="contactus">
+            <CardContent className="contact">
+              <div className="con">
+                <a target="_blank" href="#" rel="noreferrer">
+                  {" "}
+                  <GitHubIcon/>{" "}
+                </a>
+              </div>
+              <div className="coni">
+                <a target="_blank" href="#" rel="noreferrer">
+                  {" "}
+                  <LinkedInIcon/>
+                </a>
+              </div>
+              <div className="ins">
+                <a target="_blank" href="#" rel="noreferrer">
+                  <InstagramIcon/>
+                </a>{" "}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
       </div>
-      <Footer />
+
     </>
   );
 }
