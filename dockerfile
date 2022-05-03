@@ -36,23 +36,23 @@
 
 
 
-# get the base node image
-FROM node:alpine as builder
+# # get the base node image
+# FROM node:alpine as builder
 
-# set the working dir for container
-WORKDIR /student-network
+# # set the working dir for container
+# WORKDIR /student-network
 
-# copy the json file first
-COPY ./package.json /student-network
+# # copy the json file first
+# COPY ./package.json /student-network
 
-# install npm dependencies
-RUN npm install
+# # install npm dependencies
+# RUN npm install
 
-# copy other project files
-COPY . .
+# # copy other project files
+# COPY . .
 
-# build the folder
-CMD [ "npm", "run", "start" ]
+# # build the folder
+# CMD [ "npm", "run", "start" ]
 
 
 
