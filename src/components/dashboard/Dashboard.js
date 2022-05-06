@@ -5,6 +5,7 @@ import HomeImg from "../../img/home2.jpg";
 import Topbar from "../../components/topbar/Topbar";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Footer from "../../components/footer/footer";
+import Profile from "../../pages/profile/Profile";
 
 // import "./home1.css";
 import {Card, CardContent} from "@material-ui/core";
@@ -24,15 +25,15 @@ export default function Dashboard() {
           <p className="lead">
             {/*<i className="fas fa user"></i> WelCome {user && user.name}*/}
           </p>
-          {profile !== null ? (
+          {Profile !== null ? (
               <Fragment>
                 {/*<DashboardAction />*/}
                 {/*<Experience experience={profile.experience} />*/}
                 {/*<Education education={profile.education} />*/}
                 <div className="my-2">
-                  <button className="btn btn-danger" onClick={() => deleteAccount()}>
+                  {/* <button className="btn btn-danger" onClick={() => deleteAccount()}>
                     <i className="fas fa-user-minus"></i> Delete my Account
-                  </button>
+                  </button> */}
                 </div>
               </Fragment>
           ) : (
